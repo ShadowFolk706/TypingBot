@@ -5,5 +5,7 @@ This project is meant to deceive Google Doc extensions that allow ceratin users 
 Prerequisites
 - Python
 - Ollama
-  - You also need an Ollama model downloaded, this is easy to do. This code currently uses the model llama2, but that can be changed by replacing the "llama2" model with whatever model you downloaded
+  - You also need an Ollama model downloaded, this is easy to do. This code currently uses the model llama3.2, but that can be changed by replacing the "llama3.2" model with whatever model you downloaded
 - PyAutoGui
+
+Both using AI and not using AI work now. There are pauses randomly for both ends of words and sentences to further mimik a human typer. These can be toggled from input to input as well as a text informing the user that the bot is done typing.
