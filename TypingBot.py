@@ -14,16 +14,9 @@ def Type(String, wordThink, sentenceThink, paragraphThink, dismissal):
     times = [0.032, 0.035, 0.0375, 0.04]
 
     # Countdown
-    print('You have 5 seconds to place your cursor', end='\r')
-    time.sleep(1)
-    print('You have 4 seconds to place your cursor', end='\r')
-    time.sleep(1)
-    print('You have 3 seconds to place your cursor', end='\r')
-    time.sleep(1)
-    print('You have 2 seconds to place your cursor', end='\r')
-    time.sleep(1)
-    print('You have 1 second to place your cursor', end='\r')
-    time.sleep(1)
+    for i in range(5, 0, -1):
+        print(f'You have {i} second{'s' if i>1 else ''} to place your cursor.{' ' if i<=1 else ''}', end='\r')
+        time.sleep(1)
 
     # Printing Stuff
     i = 0
