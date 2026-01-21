@@ -15,14 +15,13 @@ def Type(String, wordThink, sentenceThink, paragraphThink, dismissal):
 
     # Countdown
     for i in range(5, 0, -1):
-        print(f'You have {i} second{'s' if i>1 else ''} to place your cursor.{' ' if i<=1 else ''}', end='\r')
+        print(f'You have \x1b[33m{i} second{'s' if i>1 else ''}\x1b[39m to place your cursor.{' ' if i<=1 else ''}', end='\r')
         time.sleep(1)
 
     # Printing Stuff
     i = 0
     while i < len(txtToPrint):
         intrvl = random.choice(times)
-        wordSplit = list(txtToPrint[i])
 
         # Paragraph Wait
         if '\n' in txtToPrint[i]:
@@ -64,11 +63,11 @@ def Spinner(stopEvent):
     spinState=['⠹', '⠼', '⠶','⠧','⠏', '⠛']
     i=0
     while not stopEvent.is_set():
-        print(f'{spinState[i]}', end='\r')
+        print(f'\x1b[31m{spinState[i]}\x1b[39m', end='\r')
         time.sleep(.1)
         i = (i+1)%len(spinState)
     print(' ', end='\r')
-
+# New Thread, Who Dis?
 stopSpinner = threading.Event()
 
 
@@ -131,4 +130,5 @@ while True:
         spinnerThread.join()
         Type(aiAnswer, wordThinkBool, sentenceThinkBool, paragraphThinkBool, dissmissalBool)
     
-    print("\nDone!", end='\n\n')
+    print("\n\x1b[32mDone!\x1b[39m", end='\n\n')
+
