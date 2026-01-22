@@ -10,3 +10,8 @@ Prerequisites
 - Let your terminal control your device
 
 Both using AI and not using AI work now. There are pauses randomly for ends of words, sentences, and paragraphs to further mimik a human typer. These can be toggled from input to input as well as AI mode and text informing the user that the bot is done typing.
+
+To Add:
+- „Revisions“
+    - Misspell words intentionally and then delete until the mistake and correct it
+
